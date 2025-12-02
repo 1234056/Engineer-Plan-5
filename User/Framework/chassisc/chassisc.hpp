@@ -9,8 +9,8 @@
 #include "remotec.hpp"
 
 // TODO: 根据需要调整
-#define CHASSIS_ONLY
-// #define WHOLE_ROBOT
+//#define CHASSIS_ONLY
+#define WHOLE_ROBOT
 
 #define CHASSIS_KP          150.0f
 #define CHASSIS_KI          1.0f

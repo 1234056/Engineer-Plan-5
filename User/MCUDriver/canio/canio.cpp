@@ -50,6 +50,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan)
     if (hcan->Instance == CAN2)
     {
         chassis.GetGimbalCmd(ID, rx_data);
+
     }
 
     if (hcan->Instance == CAN1)
