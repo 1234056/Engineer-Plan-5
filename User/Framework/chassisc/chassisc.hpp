@@ -92,9 +92,9 @@ private:
     eSolveDir chassis_type = OMNI_WHEEL;
 
     // TODO: 根据实际做更改！！！
-    float wheel_r_  = 1; //轮子半径，单位m
-    float width_2_  = 1; //车体半宽，单位m
-    float length_2_ = 1; //车体半长，单位m
+    float wheel_r_  = 0.15/2; //轮子半径，单位m
+    float width_2_  = 0.3; //车体半宽，单位m
+    float length_2_ = 0.3; //车体半长，单位m
 
     float theta_         = 0;     //云台偏移全局坐标的角度
     float wheel_spd_max_ = 80.0f; //最大角速度

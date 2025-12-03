@@ -18,8 +18,8 @@ void ChassisC::GetGimbalCmd(uint32_t ID, uint8_t data[8])
         yaw_agl          = (float)(int16_t)((data[4] << 8) | data[5]);
         mode             = (int8_t)data[6];
         gimbal_online_   = (bool)data[7];
-        rc_target_vel[X] = (float)vx/100.0f ;
-        rc_target_vel[Y] = (float)vy/100.0f ;
+        rc_target_vel[X] = (float)vx/50.0f ;
+        rc_target_vel[Y] = (float)vy/50.0f ;
         yaw_pid.SetTarget(0.0f, PID_POSITIONAL);
         if (mode == 3)
         {
@@ -27,7 +27,7 @@ void ChassisC::GetGimbalCmd(uint32_t ID, uint8_t data[8])
         }
         else if (mode == 2)
         {
-            rc_target_vel[Z] = 0;
+            rc_target_vel[Z] = 200.0f;
         }
         times_ = 0;
         usart_printf("%f %f %f\n",rc_target_vel[X], rc_target_vel[Y], yaw_agl);
